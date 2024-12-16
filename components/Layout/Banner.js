@@ -5,7 +5,7 @@ const Banner = () => {
   return (
     <section className="banner-section py-16 bg-black">
       <div className="container mx-auto">
-        <div className="banner-wrap flex flex-nowrap justify-between gap-8">
+        <div className="banner-wrap flex flex-wrap justify-between gap-8">
           
           {/* Left Banner */}
           <Link href="/categories.html" className="banner-left w-full md:w-2/5 block relative hover:scale-105 transition-transform duration-300">
