@@ -11,7 +11,7 @@ const CtaSection = () => {
               Where luxury meets individuality. Discover a curated selection of exquisite watches that resonate with your unique style and personality.
             </p>
             <div className="cta-btn-wrap">
-              <Link href="/categories" className="inline-block bg-blue-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-600">
+              <Link href="/categories" className="inline-block bg-black text-white px-6 py-3 rounded-lg text-lg hover:bg-grey-600">
                 Shop Collection
               </Link>
             </div>
