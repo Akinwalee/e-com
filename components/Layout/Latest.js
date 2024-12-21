@@ -3,13 +3,13 @@ import sampleProducts from './sampleProducts';
 
 export default function Latest({ products = sampleProducts }) {
     return (
-      <div className="container mx-auto px-4 py-12">
+      <div className="w-3/6 mx-auto py-12">
         <div className="mb-8">
-          <div className="text-xl font-semibold text-gray-500">Explore Our Products</div>
-          <h2 className="text-3xl font-bold text-gray-900">Latest Products</h2>
+          <div className="text-md  text-gray-500">Explore Our Products</div>
+          <h2 className="text-2xl  text-gray-900">Latest Products</h2>
         </div>
         <div className="flex flex-wrap">
-          <div role="list" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div role="list" className="flex justify-between w-full">
             {products.length > 0 ? (
                 products.map((product) => (
                     <LatestItem key={product.id} product={product} />

@@ -2,10 +2,10 @@ import Image from 'next/image';
 
 const Brands = () => {
     return (
-        <section className="featured-brands py-12">
-            <div className="container mx-auto border-t border-gray-700 pt-3">
-                <h2 className="text-3xl text-center mb-4 font-bold">Our Top Brands</h2>
-                <div className="flex justify-center space-x-8 pt-5">
+        <section className="featured-brands mt-48 mb-8">
+            <div className="mx-auto border-t border-neutral-300">
+                <h2 className="text-2xl  text-center mb-4 ">Our Top Brands</h2>
+                <div className="flex justify-between w-3/6 mx-auto space-x-8 pt-8">
                 {[
                     'bulova-2.svg',
                     'seiko-1.svg', 
@@ -17,7 +17,7 @@ const Brands = () => {
                     key={brand}
                     src={`/images/${brand}`} 
                     alt={`${brand} Logo`} 
-                    width={100} 
+                    width={120} 
                     height={50} 
                     className="grayscale hover:grayscale-0 transition"
                     />
