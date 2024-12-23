@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout/Layout';
+import Brands from '../components/Layout/Brands'
 
 export default function SignUp() {
   const [formData, setFormData] = useState({
@@ -148,7 +149,9 @@ export default function SignUp() {
               </span>
             </p>
           </form>
+          <Brands />
         </div>
+        
       </div>
     </Layout>
   );
