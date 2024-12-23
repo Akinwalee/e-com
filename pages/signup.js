@@ -68,7 +68,7 @@ export default function SignUp() {
                   type="text"
                   required
                   // className="appearance-none rounded-md relative block w-full px-3 py-2 border- border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                  className="bg-[#f8f7f6] outline-none w-full py-2 border-b-[1px] border-t-0 border-r-0 border-l-0 border-black text-gray-900 sm:text-sm"
+                  className="bg-[#f8f7f6] border-black outline-none w-full py-2 border-b-[1px] border-t-0 border-r-0 border-l-0 text-gray-900 sm:text-sm"
                   placeholder=""
                   value={formData.firstName}
                   onChange={handleChange}
