@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
-    <nav className="w-full bg-black shadow-md text-white border-b border-neutral-800 p-2">
+    <nav className={`w-full border-b ${props.style} border-neutral-800 p-2`}>
       <div className="w-3/6 mx-auto flex justify-between items-center py-4">
         <Link href="/">
           <Image 
-            src="/images/GlobalTimesLogo.svg" 
+            src={`${props.imgSrc}`} 
             alt="Global Times Logo" 
             width={200} 
             height={50}
