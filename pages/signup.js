@@ -51,20 +51,13 @@ export default function SignUp() {
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
               Create your account
             </h2>
-            <p className="mt-2 text-center text-sm text-gray-600">
-              Already have an account?{' '}
-              <Link href="/login" className="font-medium text-black hover:text-blue-500">
-                Login
-              </Link>
-            </p>
           </div>
           <form className="mt-8 space-y-6 bg-[#f8f7f6] p-[1rem]" onSubmit={handleSubmit}>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="user-field ">
-                <label htmlFor="firstName" className="text-[0.8rem] mb-0.5">First Name</label>
+            <div className="user-field ">
+                <label htmlFor="name" className="text-[0.8rem] mb-0.5">Name</label>
                 <input
-                  id="firstName"
-                  name="firstName"
+                  id="name"
+                  name="name"
                   type="text"
                   required
                   // className="appearance-none rounded-md relative block w-full px-3 py-2 border- border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
@@ -73,21 +66,6 @@ export default function SignUp() {
                   value={formData.firstName}
                   onChange={handleChange}
                 />
-              </div>
-              <div className="user-field">
-                <label htmlFor="lastName" className="text-[0.8rem] mb-0.5">Last Name</label>
-                <input
-                  id="lastName"
-                  name="lastName"
-                  type="text"
-                  required
-                  // className="bg-[#f8f7f6] appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                  className="bg-[#f8f7f6] outline-none w-full py-2 border-b-[1px] border-t-0 border-r-0 border-l-0 border-black text-gray-900 sm:text-sm"
-                  placeholder=""
-                  value={formData.lastName}
-                  onChange={handleChange}
-                />
-              </div>
             </div>
             <div className="user-field">
               <label htmlFor="email" className="text-[0.8rem] mb-0.5">Email address</label>
@@ -135,10 +113,16 @@ export default function SignUp() {
               />
             </div>
 
-            <div>
-              
-              <label typeof='checkbox'><span>By creating an account, I agree to this website's <span>privacy policy</span> and <span>terms of service</span></span></label>
-              <label typeof='checkbox'> I consent to recieve marketing emails</label>
+            <div className='consent-agreement'>
+              <div className='terms flex gap-2'>
+                <input type='checkbox' id='terms' name='terms' className='w-6 h-6' />
+                <label htmlFor='terms'><span>By creating an account, I agree to this website's <span>privacy policy</span> and <span>terms of service</span></span></label>
+              </div>
+
+              <div className='marketing flex gap-2'>
+                <input type='checkbox' id='marketing' name='marketing' className='' />
+                <label htmlFor='marketing'><span>I consent to receive marketing emails</span></label>
+              </div>
             </div>
             
             {error && (
@@ -155,6 +139,12 @@ export default function SignUp() {
                 Create account
               </button>
             </div>
+            <p className="mt-2 text-center text-sm text-gray-600">
+              Already have an account?{' '}
+              <Link href="/login" className="font-medium text-black hover:text-blue-500">
+                Login
+              </Link>
+            </p>
           </form>
         </div>
       </div>
