@@ -45,7 +45,7 @@ export default function SignUp() {
 
   return (
     <Layout>
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen flex items-center justify-center py-12 px-4  sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div>
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
@@ -58,78 +58,89 @@ export default function SignUp() {
               </Link>
             </p>
           </div>
-          <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
+          <form className="mt-8 space-y-6 bg-[#f8f7f6] p-[1rem]" onSubmit={handleSubmit}>
             <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label htmlFor="firstName" className="sr-only">First Name</label>
+              <div className="user-field ">
+                <label htmlFor="firstName" className="text-[0.8rem] mb-0.5">First Name</label>
                 <input
                   id="firstName"
                   name="firstName"
                   type="text"
                   required
-                  className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                  placeholder="First Name"
+                  // className="appearance-none rounded-md relative block w-full px-3 py-2 border- border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                  className="bg-[#f8f7f6] outline-none w-full py-2 border-b-[1px] border-t-0 border-r-0 border-l-0 border-black text-gray-900 sm:text-sm"
+                  placeholder=""
                   value={formData.firstName}
                   onChange={handleChange}
                 />
               </div>
-              <div>
-                <label htmlFor="lastName" className="sr-only">Last Name</label>
+              <div className="user-field">
+                <label htmlFor="lastName" className="text-[0.8rem] mb-0.5">Last Name</label>
                 <input
                   id="lastName"
                   name="lastName"
                   type="text"
                   required
-                  className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                  placeholder="Last Name"
+                  // className="bg-[#f8f7f6] appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                  className="bg-[#f8f7f6] outline-none w-full py-2 border-b-[1px] border-t-0 border-r-0 border-l-0 border-black text-gray-900 sm:text-sm"
+                  placeholder=""
                   value={formData.lastName}
                   onChange={handleChange}
                 />
               </div>
             </div>
-            <div>
-              <label htmlFor="email" className="sr-only">Email address</label>
+            <div className="user-field">
+              <label htmlFor="email" className="text-[0.8rem] mb-0.5">Email address</label>
               <input
                 id="email"
                 name="email"
                 type="email"
                 autoComplete="email"
                 required
-                className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                placeholder="Email address"
+                // className="bg-[#f8f7f6] appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="bg-[#f8f7f6] outline-none w-full py-2 border-b-[1px] border-t-0 border-r-0 border-l-0 border-black text-gray-900 sm:text-sm"
+                placeholder=""
                 value={formData.email}
                 onChange={handleChange}
               />
             </div>
-            <div>
-              <label htmlFor="password" className="sr-only">Password</label>
+            <div className="user-field">
+              <label htmlFor="password" className="text-[0.8rem] mb-0.5">Password</label>
               <input
                 id="password"
                 name="password"
                 type="password"
                 autoComplete="current-password"
                 required
-                className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                placeholder="Password"
+                // className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="bg-[#f8f7f6] outline-none w-full py-2 border-b-[1px] border-t-0 border-r-0 border-l-0 border-black text-gray-900 sm:text-sm"
+                placeholder=""
                 value={formData.password}
                 onChange={handleChange}
               />
             </div>
-            <div>
-              <label htmlFor="confirmPassword" className="sr-only">Confirm Password</label>
+            <div className="user-field">
+              <label htmlFor="confirmPassword" className="text-[0.8rem] mb-0.5">Confirm Password</label>
               <input
                 id="confirmPassword"
                 name="confirmPassword"
                 type="password"
                 autoComplete="current-password"
                 required
-                className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                placeholder="Confirm Password"
+                // className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="bg-[#f8f7f6] outline-none w-full py-2 border-b-[1px] border-t-0 border-r-0 border-l-0 border-black text-gray-900 sm:text-sm"
+                placeholder=""
                 value={formData.confirmPassword}
                 onChange={handleChange}
               />
             </div>
 
+            <div>
+              
+              <label typeof='checkbox'><span>By creating an account, I agree to this website's <span>privacy policy</span> and <span>terms of service</span></span></label>
+              <label typeof='checkbox'> I consent to recieve marketing emails</label>
+            </div>
+            
             {error && (
               <div className="text-red-500 text-sm text-center">
                 {error}

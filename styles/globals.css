@@ -7,4 +7,5 @@
 /* Custom global styles */
 body {
   @apply font-montserrat;
+  background: white;
 }
