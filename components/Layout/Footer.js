@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white pt-12 pb-6">
       <div className="w-3/6 mx-auto">
-        <div className="flex space-x-28">
+        <div className="flex flex-wrap md:flex-nowrap space-x-28">
           <div>
             <h4 className=" mb-8">PAGES</h4>
             <nav className="text-neutral-400 text-xs space-y-2">
