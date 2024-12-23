@@ -49,7 +49,7 @@ export default function SignUp() {
         <div className="max-w-md w-full space-y-8">
           <div>
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-              Create your account
+              Sign Up
             </h2>
           </div>
           <form className="mt-8 space-y-6 bg-[#f8f7f6] p-[1rem]" onSubmit={handleSubmit}>
@@ -116,7 +116,7 @@ export default function SignUp() {
             <div className='consent-agreement'>
               <div className='terms flex gap-2'>
                 <input type='checkbox' id='terms' name='terms' className='w-6 h-6' />
-                <label htmlFor='terms'><span>By creating an account, I agree to this website's <span>privacy policy</span> and <span>terms of service</span></span></label>
+                <label htmlFor='terms'><span>By creating an account, I agree to this website's <span className="underline">privacy policy</span> and <span className='underline'>terms of service</span></span></label>
               </div>
 
               <div className='marketing flex gap-2'>
@@ -136,14 +136,16 @@ export default function SignUp() {
                 type="submit"
                 className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               >
-                Create account
+                Sign Up
               </button>
             </div>
-            <p className="mt-2 text-center text-sm text-gray-600">
-              Already have an account?{' '}
-              <Link href="/login" className="font-medium text-black hover:text-blue-500">
-                Login
-              </Link>
+            <p className="mt-2 flex justify-between text-sm text-gray-600">
+             <span>Already have an account?{' '}</span>
+             <span>
+                <Link href="/login" className="font-medium text-black hover:text-blue-500 underline">
+                  Log In
+                </Link>
+              </span>
             </p>
           </form>
         </div>
