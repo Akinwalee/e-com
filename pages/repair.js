@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Layout from '../components/Layout/Layout';
 
 export default function Repair() {
+  const [image, setImage] = useState(null);
+  const [error, setError] = useState(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -34,6 +36,18 @@ export default function Repair() {
     }
   ];
 
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      if (!file.type.startsWith("image/")) {
+        setError("Only image files are allowed!");
+        setImage(null);
+      }
+      setError("");
+      setImage(file);
+    }
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -44,6 +58,7 @@ export default function Repair() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    formData.append("image", image)
     // TODO: Implement repair request submission
     console.log('Repair request:', formData);
   };
@@ -156,7 +171,27 @@ export default function Repair() {
                   ))}
                 </select>
               </div>
-
+                
+              <div className='flex gap-15'>
+                <div>
+                  <label
+                    htmlFor="upload-image"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Upload Image
+                  </label>
+                  <input
+                    name='uplaod-image'
+                    type="file" 
+                    accept='image/*' 
+                    onChange={handleImageChange}
+                    className='mt-1'
+                  />
+                </div>
+                {error && (
+                  <p>error</p>
+                )}
+              </div>
               <div>
                 <label
                   htmlFor="description"
@@ -164,7 +199,7 @@ export default function Repair() {
                 >
                   Additional Information
                 </label>
-                <text area
+                <textarea
                   name="description"
                   id="description"
                   rows={4}
