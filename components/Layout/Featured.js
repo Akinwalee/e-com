@@ -3,13 +3,13 @@ import sampleProducts from './sampleProducts';
 
 export default function Featured({ products = sampleProducts }) {
     return (
-      <div className="mx-auto w-3/6 py-12">
+      <div className="w-full md:mx-auto px-4 md:px-0 md:w-3/6 py-12">
         <div className="mb-8">
           <div className="text-xs font-thin text-black">SHOWCASE</div>
           <h2 className="text-3xl font-thin text-gray-900 font-manrope mt-4">Featured Watches</h2>
         </div>
-        <div className="flex flex-wrap">
-          <div role="list" className="flex w-full justify-between">
+        <div>
+          <div role="list" className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
             {products.length > 0 ? (
                 products.map((product) => (
                     <FeaturedItem key={product.id} product={product} />
