@@ -33,19 +33,19 @@ const AppraisalSection = () => {
 
   return (
     <section className="appraisal bg-black text-white">
-      <div className="w-layout-blockcontainer w-3/6 mx-auto my-32 py-24">
-        <div className="appraisal-wrap flex flex-col md:flex-row">
-          <div className="appraisal-left md:w-3/6">
+      <div className="w-layout-blockcontainer px-4 lg:w-3/6 mx-auto py-24">
+        <div className="appraisal-wrap grid lg:grid-cols-2">
+          <div className="appraisal-left w-full ">
             <div>
               <h2 className="appraisal-title text-3xl">Luxury Watch Guidance</h2>
-              <p className="appraisal-text mt-6 text-md text-white-600 pr-12">
+              <p className="appraisal-text mt-6 text-md text-white-600 lg:pr-12">
                 Whether you're looking for a timeless piece for a special occasion or a reliable everyday watch, our dedicated team is here to help you find the perfect match that reflects your unique personality and style.
               </p>
             </div>
 
             <div className="appraisal-data space-y-6 transition-all duration-500" style={{marginTop: parentMarginTop}}>
               {services.map((item, index) => (
-                <div key={index} className="appraisal-info w-dropdown border-b border-neutral-700 w-5/6 ">
+                <div key={index} className="appraisal-info w-dropdown border-b border-neutral-700 lg:w-5/6 ">
                   <div
                     className="appraisal-toggle w-dropdown-toggle flex space-x-6 text-md cursor-pointer p-2"
                     onClick={() => toggleDropdown(index)}
@@ -56,7 +56,7 @@ const AppraisalSection = () => {
                     <h4 className="toggle-text text-md">{item.title}</h4>
                   </div>
                   {activeDropdown === index && (
-                    <div id={`service-description-${index}`} className={`appraisal-list w-dropdown-list p-4`}>
+                    <div id={`service-description-${index}`} className={`appraisal-list w-dropdown-list p-2 lg:p-4`}>
                       <div className="appraisal-box">
                         <p className="appraisal-list-text text-gray-300">{item.description}</p>
                       </div>
@@ -67,13 +67,14 @@ const AppraisalSection = () => {
             </div>
           </div>
 
-          <div className="appraisal-img relative md:w-3/6 overflow-hidden">
+          <div className="appraisal-img relative h-[700px] lg:h-[auto] ">
             <Image
               src="/images/roger-varenhorst-1UL_ux0Zo7g-unsplash.jpg"
               alt="Appraisal Image"
-              width={250}
+              width={400}
               height={30}
-              className="appraisal-image absolute w-full left-14"
+              className='absolute w-full h-full'
+              
             />
           </div>
         </div>
