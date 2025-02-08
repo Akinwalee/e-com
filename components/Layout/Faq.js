@@ -44,7 +44,7 @@ const faqs = [
     },
 ]
 return (
-    <section className='w-full p-4 mx-auto my-16 lg:my-32 lg:p-0 lg:w-1/2'>
+    <section className='w-full p-4 mx-auto mb-20 lg:my-32 lg:p-0 lg:w-1/2'>
         <div  className='faq-container'>
             <p className='text-xs'>FAQ's</p>
             <p className='text-3xl font-medium my-5'>Have any Questions?</p>
@@ -62,34 +62,35 @@ return (
                 
                     {faqs.map((faq) => {
                         return(
-                                <div key={faq.id} className='py-6 border-t border-black'>
-                                    <div className='flex gap-5 pb-3 items-center'>
-                                        <Image 
-                                            src={faq.src}
-                                            alt={faq.alt}
-                                            width={faq.dimension}
-                                            height={faq.dimension}
-                                            onClick={() => handleToggle(faq.id)}
-                                            className={`cursor-pointer ${faqToggle === faq.id ? "rotate-90 transition-transform duration-300" : ""}`}
-                                        />
-                                        <p className='text-lg font-medium'>{faq.question}</p>
+                            <div key={faq.id} className='py-6 border-t border-black'>
+                                <div className='flex gap-5 pb-3 items-center'>
+                                    <Image 
+                                        src={faq.src}
+                                        alt={faq.alt}
+                                        width={faq.dimension}
+                                        height={faq.dimension}
+                                        onClick={() => handleToggle(faq.id)}
+                                        className={`cursor-pointer ${faqToggle === faq.id ? "rotate-90 transition-transform duration-300" : ""}`}
+                                    />
+                                    <p className='text-lg font-medium'>{faq.question}</p>
+                                </div>
+                                {faqToggle === faq.id && (
+                                    <div className="faq-answer mt-2 px-12">
+                                        <p>{faq.answer}</p>
                                     </div>
-                                    {faqToggle === faq.id && (
-                                        <div className="faq-answer mt-2 px-12">
-                                            <p>{faq.answer}</p>
-                                        </div>
-                                    )}
-                                </div>  
+                                )}
+                            </div>  
                         )
                     })}
                 
-                    <div className='flex gap-5 py-3 text-xs mt-10'>
+                    <div className='flex gap-1 py-3 text-xs mt-0 lg:mt-10'>
                         <p>Explore Collection</p>
                         <Image
                             src='/images/ic-arrow.svg'
                             alt='arrow icon'
                             width={20}
                             height={20}
+                            className='hover:translate-x-1 duration-500 cursor-pointer'
                         />
                     </div>
                 </div>

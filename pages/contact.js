@@ -50,7 +50,7 @@ import Link from 'next/link';
 
               <div className='policy-container mt-10 flex text-xs justify-between '>
                 <div className='flex gap-2 items-center'>
-                  <input type="checkbox"></input>
+                  <input type="checkbox" className='cursor-pointer'></input>
                   <p>I agree to 
                     <Link href="/contact" className='hover:underline cursor-pointer'> Terms
                     </Link> and 
@@ -59,7 +59,7 @@ import Link from 'next/link';
                   </p>
                 </div>
 
-                <div className='py-3 px-4 border-black border hover:text-white hover:bg-black duration-300'>Submit</div>
+                <div className='py-3 px-4 border-black border hover:text-white hover:bg-black duration-300 cursor-pointer'>Submit</div>
               </div>
           </div>
         </div>

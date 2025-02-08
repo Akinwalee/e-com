@@ -97,7 +97,7 @@ export default function AboutUs() {
             </div>
 
             <div className="stats absolute lg:right-1/4 lg:bottom-2 lg:flex lg:justify-between lg:w-1/4">
-              <div className='marquee-sliding w-full px-4 lg:bottom-0 lg:p-0 lg:w-full'>
+              <div className='marquee-sliding w-full mt-5 px-4 lg:mt-0 lg:bottom-0 lg:p-0 lg:w-full'>
                 <marquee>
                   <div className='flex'>
                       {marquee.map((list, index) => {
@@ -148,7 +148,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <section className="our-vision my-16 lg:my-16 lg:my-32">
+      <section className="our-vision my-16 lg:my-32">
         <div className="vision-container w-full lg:w-1/2 mx-auto">
           <div className="flex flex-col items-center px-4 lg:px-0 lg:flex-row lg:gap-10">
             <div className="w-full lg:w-1/2">
