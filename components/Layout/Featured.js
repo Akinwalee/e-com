@@ -3,7 +3,7 @@ import sampleProducts from './sampleProducts';
 
 export default function Featured({ products = sampleProducts }) {
     return (
-      <div className="w-full md:mx-auto px-4 md:px-0 md:w-3/6 py-12">
+      <div className="w-full lg:mx-auto px-4 lg:px-0 lg:w-3/6 py-12">
         <div className="mb-8">
           <div className="text-xs font-thin text-black">SHOWCASE</div>
           <h2 className="text-3xl font-thin text-gray-900 font-manrope mt-4">Featured Watches</h2>

@@ -33,10 +33,10 @@ const AppraisalSection = () => {
 
   return (
     <section className="appraisal bg-black text-white">
-      <div className="w-layout-blockcontainer px-4 lg:w-3/6 mx-auto py-24">
-        <div className="appraisal-wrap grid lg:grid-cols-2">
-          <div className="appraisal-left w-full ">
-            <div>
+      <div className="w-layout-blockcontainer px-4 lg:pl-[80px] lg:w-4/6 mx-auto py-24">
+        <div className="appraisal-wrap flex flex-col-reverse lg:flex-row">
+          <div className="appraisal-left lg:ml-[62px] w-full ">
+            <div className='mt-6 lg:mt-0'>
               <h2 className="appraisal-title text-3xl">Luxury Watch Guidance</h2>
               <p className="appraisal-text mt-6 text-md text-white-600 lg:pr-12">
                 Whether you're looking for a timeless piece for a special occasion or a reliable everyday watch, our dedicated team is here to help you find the perfect match that reflects your unique personality and style.
@@ -67,14 +67,12 @@ const AppraisalSection = () => {
             </div>
           </div>
 
-          <div className="appraisal-img relative h-[700px] lg:h-[auto] ">
+          <div className="appraisal-img relative min-h-[700px] lg:min-h-[400px] w-full">
             <Image
               src="/images/roger-varenhorst-1UL_ux0Zo7g-unsplash.jpg"
               alt="Appraisal Image"
-              width={400}
-              height={30}
-              className='absolute w-full h-full'
-              
+              fill
+              className="absolute object-cover"
             />
           </div>
         </div>
