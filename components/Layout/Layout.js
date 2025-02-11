@@ -2,6 +2,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 
 const Layout = ({ children }) => {
+ 
   return (
     <>
       <Navbar 
@@ -11,6 +12,9 @@ const Layout = ({ children }) => {
         cart="/images/ic-cart.svg"
         user="/images/ic-user.svg"
         menuBar="/images/menu-bar.svg"
+        closeBar="/images/ic-close.svg"
+
+      
       />
       <main>{children}</main>
       <Footer />
